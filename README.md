@@ -7,6 +7,28 @@
 
 <div align="center">
 
+## 配置项
+
+<details>
+  <summary><b style="font-size: 1.5rem">配置项列表</b></summary>
+
+### palworld_host_port
+
+- 类型：`str`
+- 默认值：`None`
+- 说明：幻兽帕鲁的主机+开放的restapi的端口
+- 重要：必填
+
+### palworld_token
+
+- 类型：`str`
+- 默认值：`None`
+- 说明：你的服务器管理密码
+- 重要：必填
+
+</details>
+<br>
+
 ## 如何使用？
 
 - pl状态 ：获取服务器状态
