@@ -1,3 +1,15 @@
+Metadata-Version: 2.1
+Name: nonebot-plugin-palworld
+Version: 0.0.3
+Summary: 幻兽帕鲁服务器rest api使用
+Home-page: https://github.com/huanxin996/nonebot_plugin_palworld
+Author: Huan Xin
+Author-email: mc.xiaolang@foxmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
 <!-- markdownlint-disable MD033 MD036 MD041 -->
 # PalWorld Api
 

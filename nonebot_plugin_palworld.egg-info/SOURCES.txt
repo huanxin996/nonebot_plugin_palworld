@@ -1,0 +1,10 @@
+README.md
+setup.py
+nonebot_plugin_palworld/__init__.py
+nonebot_plugin_palworld/api.py
+nonebot_plugin_palworld/config.py
+nonebot_plugin_palworld.egg-info/PKG-INFO
+nonebot_plugin_palworld.egg-info/SOURCES.txt
+nonebot_plugin_palworld.egg-info/dependency_links.txt
+nonebot_plugin_palworld.egg-info/requires.txt
+nonebot_plugin_palworld.egg-info/top_level.txt
