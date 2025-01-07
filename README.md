@@ -15,14 +15,14 @@
 ### palworld_host_port
 
 - 类型：`str`
-- 默认值：`None`
+- 默认值：`127.0.0.1:8081`
 - 说明：幻兽帕鲁的主机+开放的restapi的端口
 - 重要：必填
 
 ### palworld_token
 
 - 类型：`str`
-- 默认值：`None`
+- 默认值：`your_token_here`
 - 说明：你的服务器管理密码
 - 重要：必填
 
