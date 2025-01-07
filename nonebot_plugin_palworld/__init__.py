@@ -1,10 +1,9 @@
-from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, PrivateMessageEvent, Message
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, PrivateMessageEvent, Message
 from nonebot.plugin.on import on_command
 from nonebot.params import CommandArg
-from nonebot.log import logger
 from nonebot.plugin import PluginMetadata
 from typing import Union
-from .config import hx_config,Config
+from .config import Config
 from .api import *
 
 
@@ -22,7 +21,6 @@ __plugin_meta__ = PluginMetadata(
         "~onebot.v11"
     },
 )
-
 
 
 palworld_status = on_command("pl状态",aliases={"plworld_status"}, priority=15, block=True)
