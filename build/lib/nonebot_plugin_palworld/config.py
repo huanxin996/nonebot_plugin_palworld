@@ -3,6 +3,20 @@ import re,nonebot
 from typing import Optional,Union
 from pydantic import BaseModel, Field, field_validator
 from nonebot.plugin import get_plugin_config
+import pkg_resources
+
+
+try:
+    pydantic_version = pkg_resources.get_distribution('pydantic').version
+    IS_V1 = pydantic_version.startswith('1.')
+except Exception:
+    IS_V1 = False
+
+if IS_V1:
+    from pydantic import validator as field_validator
+else:
+    from pydantic import field_validator
+
 
 class PalworldConfigError(Exception):
     """帕鲁配置相关异常"""
