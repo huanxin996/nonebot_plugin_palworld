@@ -1,21 +1,15 @@
 __author__ = "HuanXin"
 import re,nonebot
 from typing import Optional,Union
-from pydantic import BaseModel, Field, field_validator
+from nonebot.compat import PYDANTIC_V2
+from pydantic import BaseModel, Field
 from nonebot.plugin import get_plugin_config
-import pkg_resources
 
 
-try:
-    pydantic_version = pkg_resources.get_distribution('pydantic').version
-    IS_V1 = pydantic_version.startswith('1.')
-except Exception:
-    IS_V1 = False
-
-if IS_V1:
-    from pydantic import validator as field_validator
-else:
+if PYDANTIC_V2:
     from pydantic import field_validator
+else:
+    from pydantic import validator as field_validator
 
 
 class PalworldConfigError(Exception):

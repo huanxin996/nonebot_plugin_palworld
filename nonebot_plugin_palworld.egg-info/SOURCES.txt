@@ -1,3 +1,4 @@
+LICENSE
 README.md
 setup.py
 nonebot_plugin_palworld/__init__.py
