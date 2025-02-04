@@ -37,6 +37,8 @@ plworld_shutdown = on_command("pl强制关服",aliases={"plworld_shutdown"}, pri
 async def palworld_zt_handle(event: Union[GroupMessageEvent, PrivateMessageEvent]):
     server_metrics = await get_server_status()
     server_info = await get_server_info()
+    if not server_metrics or not server_info:
+        await palworld_status.finish("获取服务器状态失败,请检查后台输出")
     fps = server_metrics["serverfps"]
     time_late = server_metrics["serverframetime"]
     online = server_metrics["currentplayernum"]

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="nonebot_plugin_palworld",
-    version="0.0.7",
+    version="0.0.8",
     author="Huan Xin",
     author_email="mc.xiaolang@foxmail.com",
     description="幻兽帕鲁服务器rest api使用",

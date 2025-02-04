@@ -3,7 +3,7 @@ from nonebot.log import logger as log
 from .config import hx_config
 
 def get_auth_token():
-    username = "Admin"
+    username = hx_config.pallworld_user
     password = hx_config.palworld_token
     credentials = f"{username}:{password}"
     encoded = base64.b64encode(credentials.encode()).decode()

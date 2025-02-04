@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: nonebot-plugin-palworld
-Version: 0.0.7
+Version: 0.0.8
 Summary: 幻兽帕鲁服务器rest api使用
 Home-page: https://github.com/huanxin996/nonebot_plugin_palworld
 Author: Huan Xin
@@ -28,13 +28,20 @@ License-File: LICENSE
 ### palworld_host_port
 
 - 类型：`str`
-- 默认值：`127.0.0.1:8081`
+- 默认值：`127.0.0.1:8211`
 - 说明：幻兽帕鲁的主机+开放的restapi的端口
+- 重要：必填
+
+### palworld_user
+
+- 类型：`str`
+- 默认值：`Admin`
+- 说明：你的服务器管理密码
 - 重要：必填
 
 ### palworld_token
 
-- 类型：`str`
+- 类型：`str or int`
 - 默认值：`your_token_here`
 - 说明：你的服务器管理密码
 - 重要：必填

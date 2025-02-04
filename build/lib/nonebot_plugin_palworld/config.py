@@ -21,6 +21,10 @@ class Config(BaseModel):
         default="127.0.0.1:8211",
         description="幻兽帕鲁服务器地址和端口(格式: host:port)"
     )
+    pallworld_user: Optional[Union[str, int]] = Field(
+        default="Admin",
+        description="幻兽帕鲁服务器用户名"
+    )
     palworld_token: Optional[Union[str, int]] = Field(
         default="your_token_here",
         description="幻兽帕鲁服务器访问令牌(字符串格式)"
