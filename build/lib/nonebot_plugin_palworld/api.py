@@ -46,8 +46,7 @@ async def make_get_request(url: str,data:dict) -> dict:
                 if response.status == 200:
                     return await response.json()
                 else:
-                    log.error(f"请求失败: {response.status}")
-                    log.error(f"请求失败: {response.status}, URL: {url}")
+                    log.error(f"请求失败: {response}, URL: {url}")
                     return None
     except Exception as e:
         log.error(f"请求出错: {e}")
@@ -74,7 +73,7 @@ async def make_post_request(url: str, data: dict = {}) -> dict:
                     except Exception as e:
                         return response.status
                 else:
-                    log.error(f"POST请求失败: {response.status}, URL: {url}")
+                    log.error(f"POST请求失败: {response}, URL: {url}")
                     return None
     except Exception as e:
         log.error(f"POST请求出错: {e}, URL: {url}")

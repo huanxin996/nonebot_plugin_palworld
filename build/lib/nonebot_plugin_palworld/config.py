@@ -44,18 +44,5 @@ class Config(BaseModel):
             raise ValueError("服务器地址格式错误，应为 host:port")
         return v
 
-    @field_validator('palworld_token')
-    @classmethod
-    def validate_token(cls, v: Optional[Union[str, int]]) -> Optional[str]:
-        if v is None:
-            return v
-        if isinstance(v, int):
-            v = str(v)
-        if not isinstance(v, str):
-            raise ValueError("访问令牌必须是字符串格式或整数")
-        if not v or len(v) < 3:
-            raise v
-
-
 global_config = nonebot.get_driver().config
 hx_config = get_plugin_config(Config)

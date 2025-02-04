@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: nonebot-plugin-palworld
-Version: 0.0.8
+Version: 0.0.9
 Summary: 幻兽帕鲁服务器rest api使用
 Home-page: https://github.com/huanxin996/nonebot_plugin_palworld
 Author: Huan Xin
@@ -22,8 +22,7 @@ License-File: LICENSE
 
 ## 配置项
 
-<details>
-  <summary><b style="font-size: 1.5rem">配置项列表</b></summary>
+<summary><b style="font-size: 1.5rem">配置项列表</b></summary>
 
 ### palworld_host_port
 
@@ -46,9 +45,6 @@ License-File: LICENSE
 - 说明：你的服务器管理密码
 - 重要：必填
 
-</details>
-<br>
-
 ## 如何使用？
 
 - pl状态 ：获取服务器状态
@@ -61,6 +57,6 @@ License-File: LICENSE
 - pl关服：关停服务器；参数：关闭等待时间(数字)(非必需，默认30s)，关停前发送信息(必需)
 - pl强制关服：强制关停服务器
 
-### 作者说的一些话: 
+### 作者说的一些话
 
 本人代码水平很差，将就着用罢，有问题请提iss
