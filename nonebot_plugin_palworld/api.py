@@ -114,9 +114,9 @@ async def save_server() -> None:
     return await make_post_request(url)
 
 
-async def shutdown_server(waittime:int,message:str) -> None:
+async def shutdown_server(waittime:int=30,message:str="服务器将在30s后关闭") -> None:
     """关闭服务器"""
-    data = {"waittime": sum, "message": message}
+    data = {"waittime": waittime, "message": message}
     url = f"http://{hx_config.palworld_host_port}/v1/api/shutdown"
     return await make_post_request(url,data=data)
 

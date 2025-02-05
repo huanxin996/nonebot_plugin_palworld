@@ -60,7 +60,7 @@ async def palworld_announce_handle(event: Union[GroupMessageEvent, PrivateMessag
         await plworld_announce.finish("请输入公告内容")
     result = await send_announce(connect)
     if result:
-        await plworld_announce.finish("公告发送成功，服务器返回：{result}")
+        await plworld_announce.finish(f"公告发送成功，服务器返回：{result}")
     else:
         await plworld_announce.finish(f"公告发送失败,错误码:{result}")
 
