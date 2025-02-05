@@ -117,7 +117,7 @@ async def plworld_shutdown_handle(event:Union[GroupMessageEvent,PrivateMessageEv
     if not args:
         await plworld_kick.finish("请输入参数")
     if len(args) == 1:
-        result = await shutdown_server(30,args[1])
+        result = await shutdown_server(30,args[0])
     elif len(args) == 2:
         result = await shutdown_server(int(args[0]),args[1])
     if result == 200:
