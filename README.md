@@ -1,6 +1,10 @@
 <!-- markdownlint-disable MD033 -->
 
-# NoneBot Plugin PalWorld 插件🌟
+<div align="center">
+
+# 🌟 NoneBot Plugin PalWorld 插件 🌟
+
+</div>
 
 <p align="center">
   <a href="https://github.com/huanxin996/nonebot_plugin_hx-yinying"><img src="https://raw.githubusercontent.com/huanxin996/nonebot_plugin_hx-yinying/main/.venv/hx_img.png" width="200" height="200" alt="yinying"></a>
@@ -11,7 +15,7 @@
 ✨ **一个用于管理幻兽帕鲁服务器的 NoneBot 插件** ✨  
 支持查看服务器状态、发送公告、管理玩家等功能。
 
-</div>
+
 
 <div align="center">
 
