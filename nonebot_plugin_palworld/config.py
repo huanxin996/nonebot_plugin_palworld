@@ -3,6 +3,7 @@ import re,nonebot
 from typing import Optional,Union
 from nonebot.compat import PYDANTIC_V2
 from pydantic import BaseModel, Field
+from nonebot.log import logger
 from nonebot.plugin import get_plugin_config
 
 
@@ -29,6 +30,10 @@ class Config(BaseModel):
         default="your_token_here",
         description="幻兽帕鲁服务器访问令牌(字符串格式)"
     )
+    palworld_images_send: Optional[bool] = Field(
+        default=True,
+        description="是否发送图片"
+    )
 
     @field_validator('palworld_host_port')
     @classmethod
@@ -38,10 +43,12 @@ class Config(BaseModel):
         if isinstance(v, int):
             v = str(v)
         if not isinstance(v, str):
-            raise ValueError("服务器地址必须是字符串格式或整数")
+            logger.error("服务器地址必须是字符串格式或整数")
+            #raise ValueError("服务器地址必须是字符串格式或整数")
         pattern = r'^[\w.-]+:\d+$'
         if not re.match(pattern, v):
-            raise ValueError("服务器地址格式错误，应为 host:port")
+            logger.error("服务器地址格式错误，应为 host:port")
+            #raise ValueError("服务器地址格式错误，应为 host:port")
         return v
 
 global_config = nonebot.get_driver().config

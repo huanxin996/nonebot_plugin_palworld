@@ -1,4 +1,5 @@
-import aiohttp,base64,json
+import aiohttp,base64,asyncio
+from aiohttp import ClientTimeout
 from nonebot.log import logger as log
 from .config import hx_config
 
@@ -41,13 +42,17 @@ async def make_get_request(url: str,data:dict) -> dict:
                 'Accept': 'application/json',
                 'Authorization': get_auth_token()
                 }
-        async with aiohttp.ClientSession() as session:
+        timeout = ClientTimeout(total=10)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
             async with session.get(url, headers=headers,data=data) as response:
                 if response.status == 200:
                     return await response.json()
                 else:
                     log.error(f"请求失败: {response}, URL: {url}")
                     return None
+    except asyncio.CancelledError:
+        log.warning("请求被取消")
+        raise
     except Exception as e:
         log.error(f"请求出错: {e}")
         return None
@@ -65,7 +70,8 @@ async def make_post_request(url: str, data: dict = {}) -> dict:
             'Content-Type': 'application/json',
             'Authorization': get_auth_token()
         }
-        async with aiohttp.ClientSession() as session:
+        timeout = ClientTimeout(total=10)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
             async with session.post(url, json=data, headers=default_headers) as response:
                 if response.status == 200:
                     try:
@@ -75,6 +81,9 @@ async def make_post_request(url: str, data: dict = {}) -> dict:
                 else:
                     log.error(f"POST请求失败: {response}, URL: {url}")
                     return None
+    except asyncio.CancelledError:
+        log.warning("请求被取消")
+        raise
     except Exception as e:
         log.error(f"POST请求出错: {e}, URL: {url}")
         return None
