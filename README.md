@@ -2,7 +2,9 @@
 
 # NoneBot Plugin PalWorld 插件🌟
 
-[![PalWorld 插件 Logo](https://raw.githubusercontent.com/huanxin996/nonebot_plugin_hx-yinying/main/.venv/hx_img.png)](https://blog.huanxinbot.com/)
+<p align="center">
+  <a href="https://github.com/huanxin996/nonebot_plugin_hx-yinying"><img src="https://raw.githubusercontent.com/huanxin996/nonebot_plugin_hx-yinying/main/.venv/hx_img.png" width="200" height="200" alt="yinying"></a>
+</p>
 
 <div align="center">
 
