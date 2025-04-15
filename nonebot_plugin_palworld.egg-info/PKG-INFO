@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: nonebot_plugin_palworld
-Version: 0.1.1
+Version: 0.1.11
 Summary: 幻兽帕鲁服务器rest api使用
 Home-page: https://github.com/huanxin996/nonebot_plugin_palworld
 Author: Huan Xin
@@ -18,9 +18,15 @@ Requires-Dist: nonebot-plugin-alconna>=0.54.0
 
 <!-- markdownlint-disable MD033 -->
 
-# NoneBot Plugin PalWorld 插件🌟
+<div align="center">
 
-[![PalWorld 插件 Logo](https://raw.githubusercontent.com/huanxin996/nonebot_plugin_hx-yinying/main/.venv/hx_img.png)](https://blog.huanxinbot.com/)
+# 🌟 NoneBot Plugin PalWorld 插件 🌟
+
+</div>
+
+<p align="center">
+  <a href="https://github.com/huanxin996/nonebot_plugin_hx-yinying"><img src="https://raw.githubusercontent.com/huanxin996/nonebot_plugin_hx-yinying/main/.venv/hx_img.png" width="200" height="200" alt="yinying"></a>
+</p>
 
 <div align="center">
 
@@ -64,12 +70,6 @@ nb plugin install nonebot-plugin-palworld
 git clone https://github.com/huanxin996/nonebot_plugin_palworld.git
 cd nonebot_plugin_palworld
 pip install .
-```
-
-安装完成后，在 NoneBot 项目的 `bot.py` 中加载插件：
-
-```python
-nonebot.load_plugin("nonebot_plugin_palworld")
 ```
 
 然后配置插件所需的参数（参考下方配置项）。
@@ -159,7 +159,7 @@ nonebot.load_plugin("nonebot_plugin_palworld")
 - 支持基础服务器管理功能
 - 支持玩家管理功能
 
-### v0.1.0 (2025-04-15)
+### v0.1.1 (2025-04-15)
 
 - 使用alc支持多平台
 - 优化交互体验
@@ -167,7 +167,7 @@ nonebot.load_plugin("nonebot_plugin_palworld")
 
 ## 🤝 贡献
 
-欢迎提交 Pull Request 或 Issue！如有任何问题或建议，请随时联系我们。
+欢迎提交 Pull Request 或 Issue！如有任何问题或建议，请提issue，我看到后会第一时间处理。
 
 ## 📄 开源许可
 

@@ -43,12 +43,10 @@ class Config(BaseModel):
         if isinstance(v, int):
             v = str(v)
         if not isinstance(v, str):
-            logger.error("服务器地址必须是字符串格式或整数")
-            #raise ValueError("服务器地址必须是字符串格式或整数")
+            raise ValueError("服务器地址必须是字符串格式或整数")
         pattern = r'^[\w.-]+:\d+$'
         if not re.match(pattern, v):
-            logger.error("服务器地址格式错误，应为 host:port")
-            #raise ValueError("服务器地址格式错误，应为 host:port")
+            raise ValueError("服务器地址格式错误，应为 host:port")
         return v
 
 global_config = nonebot.get_driver().config
