@@ -48,12 +48,6 @@ cd nonebot_plugin_palworld
 pip install .
 ```
 
-安装完成后，在 NoneBot 项目的 `bot.py` 中加载插件：
-
-```python
-nonebot.load_plugin("nonebot_plugin_palworld")
-```
-
 然后配置插件所需的参数（参考下方配置项）。
 
 ---
@@ -149,7 +143,7 @@ nonebot.load_plugin("nonebot_plugin_palworld")
 
 ## 🤝 贡献
 
-欢迎提交 Pull Request 或 Issue！如有任何问题或建议，请随时联系我们。
+欢迎提交 Pull Request 或 Issue！如有任何问题或建议，请提issue，我看到后会第一时间处理。
 
 ## 📄 开源许可
 
